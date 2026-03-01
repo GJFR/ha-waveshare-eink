@@ -1,0 +1,4 @@
+Pillow
+paho-mqtt
+spidev
+RPi.GPIO

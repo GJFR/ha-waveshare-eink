@@ -1,0 +1,25 @@
+name: "Waveshare 2.7in E-Ink Display"
+description: "Updates an e-ink display via MQTT"
+version: "1.0.0"
+slug: "waveshare_eink"
+arch:
+  - aarch64
+  - armv7
+boot: auto
+options:
+  mqtt_host: "core-mosquitto"
+  mqtt_user: ""
+  mqtt_password: ""
+  mqtt_topic: "home/eink/display"
+schema:
+  mqtt_host: str
+  mqtt_user: str?
+  mqtt_password: str?
+  mqtt_topic: str
+devices:
+  - /dev/spidev0.0
+  - /dev/spidev0.1
+  - /dev/mem
+  - /dev/gpiomem
+privileged:
+  - SYS_RAWIO
